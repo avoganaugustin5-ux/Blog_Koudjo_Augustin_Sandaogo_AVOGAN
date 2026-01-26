@@ -59,7 +59,8 @@ function verEmail(champE) {
 // Une fonction qui vérifie le numéro de téléphone saisie
 
 function verPhone(champPh) {
-    var regexP = /^$/;
+    var regexP = /^\+?[0-9]{8,15}$/;
+
     if (!regexP.test(champPh.value)) {
         surligne(champPh, true);
         return false;
@@ -68,6 +69,7 @@ function verPhone(champPh) {
         return true;
     }
 }
+
 
 // Une fonction qui vérifie tout le formulaire
 

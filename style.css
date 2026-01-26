@@ -199,7 +199,7 @@ p {
 header h1 {
     font-size: 2.5em;
     font-weight: normal;
-    margin: 0px 0px 10px 10px;
+    margin: 0px 0px 10px 80px;
 }
 
 a {
@@ -233,6 +233,8 @@ h3 {
     box-shadow: 0px 2px 5px rgb(33, 3, 90);
     background-color: white;
     font-family: Verdana;
+    margin: 10px 0 10px 60px;
+    padding: 5px 0 5px 60px;
 }
 
 h4 {
@@ -241,6 +243,8 @@ h4 {
     box-shadow: 0px 2px 5px rgb(33, 3, 90);
     background-color: white;
     font-family: Verdana;
+    margin: 10px 0 10px 60px;
+    padding: 5px 0 5px 60px;
 }
 
 .mesSections {
@@ -396,10 +400,9 @@ footer {
         width: 95%;
     }
     .pp {
-        position: absolute;
-        left: 250px;
+        left: 40px;
         top: 220px;
-        right: 100px;
+        right: 0;
     }
 }
 
@@ -418,9 +421,8 @@ footer {
         width: 95%;
     }
     .pp {
-        position: absolute;
-        left: 250px;
+        left: 40px;
         top: 220px;
-        right: 100px;
+        right: 0;
     }
 }
