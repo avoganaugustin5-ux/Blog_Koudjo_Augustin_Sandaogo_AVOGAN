@@ -543,3 +543,40 @@ footer {
     background: #0a66c2;
     /* LinkedIn */
 }
+
+video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    max-width: 800px;
+}
+
+
+/* =========================
+   TABLE RESPONSIVE - MOBILE SAFE
+========================= */
+
+.tt {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media screen and (max-width: 600px) {
+    .tt th,
+    .tt td {
+        padding: 8px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+}
+
+.tt::after {
+    content: "← glissez →";
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    color: #666;
+    padding: 5px 0;
+}
