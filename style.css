@@ -413,9 +413,20 @@ footer {
     flex: 1;
 }
 
+
+/* =========================
+   SOCIAL MEDIA - FOOTER
+========================= */
+
+.social-media {
+    margin-top: 30px;
+}
+
 .social-media ul {
     display: flex;
+    flex-direction: column;
     gap: 15px;
+    padding-left: 0;
 }
 
 .social-media ul li {
@@ -423,9 +434,37 @@ footer {
 }
 
 .social-media ul li a {
-    border: 1px solid white;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+
+/* Icônes */
+
+.social-media ul li a img {
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
+    background: white;
+    padding: 4px;
+}
+
+
+/* Hover élégant */
+
+.social-media ul li a:hover {
+    background: var(--primary);
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
 }
 
 .copy-right {
@@ -433,6 +472,27 @@ footer {
     text-align: center;
     background: black;
     padding: 15px;
+}
+
+
+/* ===== CORRECTION VISIBILITÉ QUICK LINK FOOTER ===== */
+
+.footer_width.link ul li a {
+    color: #ffffff;
+    /* texte blanc */
+    font-style: normal;
+    font-weight: 600;
+}
+
+.footer_width.link ul li a:hover {
+    color: var(--accent);
+    /* orange au survol */
+    text-decoration: underline;
+}
+
+.footer_width.link ul li a {
+    padding: 6px 0;
+    display: inline-block;
 }
 
 
@@ -460,4 +520,26 @@ footer {
         width: 130px;
         height: 130px;
     }
+    .social-media ul {
+        align-items: stretch;
+    }
+    .social-media ul li a {
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+}
+
+.social-media ul li:nth-child(1) a:hover {
+    background: #1877f2;
+    /* Facebook */
+}
+
+.social-media ul li:nth-child(2) a:hover {
+    background: #25d366;
+    /* WhatsApp */
+}
+
+.social-media ul li:nth-child(3) a:hover {
+    background: #0a66c2;
+    /* LinkedIn */
 }
