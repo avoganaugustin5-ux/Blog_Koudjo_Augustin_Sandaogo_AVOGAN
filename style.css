@@ -12,7 +12,7 @@ body {
 .slide {
     height: 100%;
     width: 250px;
-    position: absolute;
+    position: fixed;
     background-color: #fff;
     transition: 0.5s ease;
     transform: translatex(-380px);
@@ -50,11 +50,12 @@ ul li a img {
 input[type="checkbox"] {
     display: inline-block;
     visibility: hidden;
+    position: fixed;
     /*-webkit-appearance: none;*/
 }
 
 .toggle {
-    position: absolute;
+    position: fixed;
     height: 30px;
     width: 30px;
     top: 20px;
