@@ -1,0 +1,336 @@
+:root {
+    --primary: #2c3e50;
+    --accent: #3498db;
+    --bg: #f4f7f6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--primary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.project-header {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.back-link:hover { background: white; color: var(--accent); }
+
+/* --- Carrousel --- */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.carousel-slide img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide:hover img {
+    transform: scale(1.02);
+}
+
+.fade {
+    animation: fadeAnim 1.5s;
+}
+
+@keyframes fadeAnim {
+    from {opacity: .4} to {opacity: 1}
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Boutons Navigation */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.next { right: 0; border-radius: 3px 0 0 3px; }
+.prev:hover, .next:hover { background: rgba(0,0,0,0.8); }
+
+/* --- Section Accès --- */
+.app-access {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.cta-box {
+    background: #f0f4f8;
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px dashed #3498db;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 15px 35px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.6);
+}
+
+/* =========================
+   VARIABLES GLOBALES
+========================= */
+:root {
+    --primary: #2c3e50;
+    --secondary: #1a252f; /* Ajout de la couleur sombre pour le footer */
+    --accent: #3498db;
+    --bg: #f4f7f6;
+    --text-light: #d1d9e6;
+}
+
+/* ... (conserve ton code existant pour le header, container et carrousel) ... */
+
+/* ============================================================
+   FOOTER - DESIGN CORRIGÉ & RESPONSIVE
+============================================================ */
+
+footer {
+    background: var(--secondary) !important; /* Force la couleur sombre */
+    color: white !important;
+    margin-top: 80px;
+    padding: 60px 20px 0 20px;
+    border-top: 5px solid var(--accent);
+    border-radius: 30px 30px 0 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Titre "Informations" */
+footer > h2 {
+    text-align: center;
+    background: transparent !important;
+    color: white !important;
+    box-shadow: none !important;
+    margin: 0 auto 40px auto !important;
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--accent) !important;
+    display: block;
+    width: fit-content;
+    padding: 10px 20px !important;
+}
+
+.footer_info {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-direction: row; /* Aligné par défaut */
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer_width {
+    flex: 1;
+    min-width: 280px; /* Force le passage à la ligne sur mobile */
+}
+
+/* Titres des colonnes (About, Quick Link, Contact) */
+.footer_width h3 {
+    background: transparent !important;
+    color: var(--accent) !important;
+    border-left: 4px solid var(--accent) !important;
+    padding: 5px 15px !important;
+    margin: 20px 0 !important;
+    box-shadow: none !important;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.footer_width p {
+    line-height: 1.7;
+    color: var(--text-light);
+    text-align: justify;
+    font-size: 0.95rem;
+}
+
+/* --- QUICK LINKS --- */
+.footer_width.link ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer_width.link ul li {
+    margin-bottom: 15px;
+}
+
+.footer_width.link ul li a {
+    color: white !important;
+    text-decoration: none;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.footer_width.link ul li a:hover {
+    color: var(--accent) !important;
+    transform: translateX(10px);
+}
+
+/* --- CONTACT SECTION --- */
+.footer_width.contact ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer_width.contact b {
+    color: var(--accent);
+}
+
+.footer_width.contact span {
+    display: block;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+/* --- SOCIAL MEDIA --- */
+.social-media ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.social-media li {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color: white !important;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.social-media a img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.social-media a:hover {
+    background: var(--accent);
+    transform: translateY(-3px);
+    text-decoration: none !important;
+}
+
+/* --- COPYRIGHT --- */
+.copy-right {
+    margin-top: 50px;
+    padding: 25px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.copy-right p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* =========================
+   RESPONSIVITÉ (MOBILE)
+========================= */
+@media screen and (max-width: 768px) {
+    .footer_info {
+        flex-direction: column; /* Colonnes les unes sous les autres */
+        gap: 40px;
+    }
+
+    .footer_width {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer_width h3 {
+        border-left: none !important;
+        border-bottom: 2px solid var(--accent) !important;
+        display: inline-block;
+    }
+
+    .footer_width p {
+        text-align: center;
+    }
+
+    .social-media a {
+        justify-content: center;
+    }
+
+    .footer_width.link ul li a:hover {
+        transform: scale(1.1); /* Effet différent sur mobile */
+    }
+}
