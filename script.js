@@ -7,7 +7,7 @@ function surligne(champ, erreur) {
         champ.style.backgroundColor = "";
 }
 
-// Une fonction qui vérifie la saisie du nom 
+// Une fonction qui vérifie la saisie du nom
 
 function verNom(champN) {
     if (champN.value.length < 2 || champN.value.length > 15) {
@@ -34,7 +34,7 @@ function verPrenom(champP) {
 // Une fonction qui vérifie la saisie de l'adresse
 
 function verAdresse(champA) {
-    if (champA.value.lenght < 2 || champA.value.lenght > 30) {
+    if (champA.value.length < 2 || champA.value.length > 30) {
         surligne(champA, true);
         return false;
     } else {
@@ -56,7 +56,7 @@ function verEmail(champE) {
     }
 }
 
-// Une fonction qui vérifie le numéro de téléphone saisie
+// Une fonction qui vérifie le numéro de téléphone saisi
 
 function verPhone(champPh) {
     var regexP = /^\+?[0-9]{8,15}$/;
@@ -70,16 +70,15 @@ function verPhone(champPh) {
     }
 }
 
-
 // Une fonction qui vérifie tout le formulaire
 
 function verForm(f) {
     var nomOk = verNom(f.nom);
     var prenomOk = verPrenom(f.prenom);
-    var sexeOk = verAdresse(f.adresse);
+    var adresseOk = verAdresse(f.adresse);
     var mailOk = verEmail(f.mail);
     var phoneOk = verPhone(f.phone);
-    if (nomOk && prenomOk && sexeOk && mailOk && phoneOk)
+    if (nomOk && prenomOk && adresseOk && mailOk && phoneOk)
         return true;
     else {
         alert("Veuillez remplir correctement tous les champs");
@@ -87,71 +86,79 @@ function verForm(f) {
     }
 }
 
-// Une fonction demandant au visiteur s'il veut vraiment télécharger mon fichier portfolio
+// Confirmation avant téléchargement de fichiers (portfolio, projets, attestation)
 
 document.addEventListener('DOMContentLoaded', () => {
-    const lien = document.getElementById('portfolio');
+    const downloadIds = ['portfolio', 'c', 'java', 'attest'];
+    const messages = {
+        portfolio: 'Voulez-vous vraiment télécharger le portfolio ?',
+        c: 'Voulez-vous vraiment télécharger les fichiers du projet en langage C ?',
+        java: 'Voulez-vous vraiment télécharger les fichiers du projet en langage Java ?',
+        attest: "Voulez-vous vraiment télécharger l'attestation de formation ?"
+    };
 
-    lien.addEventListener('click', (e) => {
-        const confirmation = confirm(' Voulez-vous vraiment télécharger le Portfolio ?');
+    downloadIds.forEach((id) => {
+        const lien = document.getElementById(id);
+        if (!lien) return;
+        lien.addEventListener('click', (e) => {
+            const confirmation = confirm(messages[id]);
+            if (!confirmation) {
+                e.preventDefault();
+            }
+        });
+    });
+});
 
-        if (!confirmation) {
-            e.preventDefault(); // Annule le téléchargement si l'utilisateur clique sur annuler
+// Animation d'apparition au défilement (scroll-reveal)
+
+document.addEventListener('DOMContentLoaded', () => {
+    const reveals = document.querySelectorAll('.mesSections, .mesArticles, .infosComplementaires');
+    reveals.forEach((el) => el.classList.add('reveal'));
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+
+    reveals.forEach((el) => observer.observe(el));
+});
+
+// Bouton "retour en haut"
+
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.createElement('a');
+    btn.href = '#pageAccueil';
+    btn.id = 'backToTop';
+    btn.setAttribute('aria-label', 'Retour en haut de la page');
+    btn.textContent = '↑';
+    document.body.appendChild(btn);
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            btn.classList.add('visible');
         } else {
-            // Possible de suivre le téléchargement en envoyant une requete au serveur
-            console.log('Téléchargement confirmé');
+            btn.classList.remove('visible');
         }
     });
 });
 
-// On demande s'il veut télécharger les fichiers du projet c ?
+// Voile sombre derrière le menu latéral quand il est ouvert
 
 document.addEventListener('DOMContentLoaded', () => {
-    const lien = document.getElementById('c');
+    const label = document.querySelector('header label');
+    if (!label) return;
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    label.appendChild(overlay);
 
-    lien.addEventListener('click', (e) => {
-        const confirmation = confirm(' Voulez-vous vraiment télécharger les fichiers du projet  en langage c ?');
-
-        if (!confirmation) {
-            e.preventDefault(); // Annule le téléchargement si l'utilisateur clique sur annuler
-        } else {
-            // Possible de suivre le téléchargement en envoyant une requete au serveur
-            console.log('Téléchargement confirmé');
-        }
-    });
-});
-
-// On demande s'il veut télécharger les fichiers du projet java ?
-
-document.addEventListener('DOMContentLoaded', () => {
-    const lien = document.getElementById('java');
-
-    lien.addEventListener('click', (e) => {
-        const confirmation = confirm(' Voulez-vous vraiment télécharger les fichiers du projet en langage java ?');
-
-        if (!confirmation) {
-            e.preventDefault(); // Annule le téléchargement si l'utilisateur clique sur annuler
-        } else {
-            // Possible de suivre le téléchargement en envoyant une requete au serveur
-            console.log('Téléchargement confirmé');
-        }
-    });
-});
-
-
-// On demande s'il veut télécharger le fichier de l'attestation de formation ?
-
-document.addEventListener('DOMContentLoaded', () => {
-    const lien = document.getElementById('attest');
-
-    lien.addEventListener('click', (e) => {
-        const confirmation = confirm(' Voulez-vous vraiment télécharger l\'attestation de formation ? ');
-
-        if (!confirmation) {
-            e.preventDefault(); // Annule le téléchargement si l'utilisateur clique sur annuler
-        } else {
-            // Possible de suivre le téléchargement en envoyant une requete au serveur
-            console.log('Téléchargement confirmé');
-        }
-    });
+    const checkbox = label.querySelector('input[type="checkbox"]');
+    if (checkbox) {
+        overlay.addEventListener('click', () => {
+            checkbox.checked = false;
+        });
+    }
 });

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projets-style.css">
+    <title>UniBurkina Hub | Portfolio Augustin AVOGAN</title>
+</head>
+<body>
+    <header class="project-header">
+        <h1>UniBurkina Hub</h1>
+        <p>Plateforme de Gestion Électronique de Documents académiques par OCR — Mémoire de fin de cycle</p>
+        <a href="index.html#projets" class="back-link">← Retour au Blog</a>
+    </header>
+
+    <main class="container">
+        <section class="details">
+            <h2>À propos du projet</h2>
+            <p>UniBurkina Hub transforme les photocopies, les fichiers épars et les groupes WhatsApp informels en une bibliothèque académique centralisée pour l'Université Thomas SANKARA. Le projet est réalisé dans le cadre de mon mémoire de fin de cycle, avec soutenance prévue en juillet 2026.</p>
+
+            <div class="tech-stack">
+                <h3>Stack Technique</h3>
+                <ul>
+                    <li><strong>Backend :</strong> FastAPI (Python 3.11), architecture microservices</li>
+                    <li><strong>Base de données :</strong> PostgreSQL</li>
+                    <li><strong>OCR :</strong> PaddleOCR avec détection de layout</li>
+                    <li><strong>Recherche :</strong> Elasticsearch (recherche plein texte)</li>
+                    <li><strong>Frontend :</strong> Bootstrap 5</li>
+                    <li><strong>Authentification :</strong> JWT, streaming temps réel via SSE</li>
+                </ul>
+            </div>
+
+            <h3>Fonctionnalités clés</h3>
+            <ul>
+                <li>OCR intelligent : conversion des photos de cours, TD et examens en documents numériques éditables</li>
+                <li>Bibliothèque centralisée classée par UFR, filière et module</li>
+                <li>Workflow de validation à plusieurs niveaux (délégué → sous-administrateur → classement officiel)</li>
+                <li>Forum académique modéré</li>
+                <li>Recherche plein texte via Elasticsearch</li>
+                <li>Export multi-formats : PDF, DOCX, XLSX, PPTX, TXT, Markdown</li>
+            </ul>
+
+            <h3>6 microservices opérationnels</h3>
+            <ul>
+                <li>Auth — Gestion des comptes et de l'authentification</li>
+                <li>GED — Gestion électronique des documents</li>
+                <li>OCR — Extraction de texte et détection de layout</li>
+                <li>Search — Recherche plein texte</li>
+                <li>Forum — Espace de discussion académique</li>
+                <li>Frontend — Interface utilisateur</li>
+            </ul>
+        </section>
+
+        <section class="app-access">
+            <div class="cta-box">
+                <h2>Explorer le projet</h2>
+                <p>La version complète tourne en local (FastAPI + PostgreSQL + PaddleOCR). Connexion et inscription disponibles sur le serveur de l'UTS uniquement — une démo publique est accessible ci-dessous.</p>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 25px;">
+                    <a href="https://avoganaugustin5-ux.github.io/uni-burkina-hub-core/" target="_blank" class="btn-primary" style="margin: 0; min-width: 200px;">Voir la démo</a>
+                    <a href="https://github.com/avoganaugustin5-ux/uni-burkina-hub-core" target="_blank" class="btn-primary" style="margin: 0; min-width: 200px; background: #333; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);">Voir sur GitHub</a>
+                </div>
+
+                <p class="sub-text" style="margin-top: 25px;">Développé par Augustin AVOGAN dans le cadre de son mémoire de fin de cycle à l'UTS.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Informations</h2>
+        <div class="footer_info">
+            <div class="footer_width about">
+                <h3>About</h3>
+                <p>
+                    Cette page web est dédiée à mon blog offrant toute possibilité à l'internaute de me contacter pour quelconque service.
+                    <br> Réalisé grâce à des cours, des livres et tutos, ceci est le produit final de la conception du site.
+                </p>
+
+                <div class="social-media">
+                    <ul>
+                        <li><a href="#"><img src="images/tn_facebook.jpg" alt="Logo Facebook"> Rechercher: AVOGAN Augustin</a></li>
+                        <li><a href="#"><img src="images/tn_whatsapp.jpg" alt="Logo WhatsApp"> Via les numéros ci-dessus</a></li>
+                        <li><a href="#"><img src="images/tn_linkedin.jpg" alt="Logo LinkedIn"> Rechercher: AVOGAN Augustin</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer_width link">
+                <h3>Quick Link</h3>
+                <ul>
+                    <li><a href="index.html#pageAccueil"><b>Accueil</b></a></li>
+                    <li><a href="index.html#projets"><b>Mes projets</b></a></li>
+                    <li><a href="index.html#formulaire"><b>Me contacter</b></a></li>
+                </ul>
+            </div>
+
+            <div class="footer_width contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li>
+                        <span>
+                            <b><u>CONTACTS :</u></b> (+226) 53 33 68 86 / (+226) 05 11 38 82
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copy-right">
+            <p>© 2026 Koudjo Augustin Sandaogo AVOGAN - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="projets-script.js"></script>
+</body>
+</html>
