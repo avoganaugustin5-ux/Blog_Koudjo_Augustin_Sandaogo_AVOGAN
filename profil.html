@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informations personnelles de Koudjo Augustin AVOGAN Sandaogo.">
+    <link rel="stylesheet" href="site.css">
+    <title>Profil — Koudjo Augustin AVOGAN</title>
+
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+
+<body>
+
+    <header>
+    <nav class="topnav">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">KA</span>
+            AVOGAN Augustin
+        </a>
+
+        <ul class="topnav-links">
+                <li><a href="profil.html" class="active">Profil</a></li>
+                <li><a href="formations.html">Formations</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="references.html">Références</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Basculer entre theme clair et sombre">
+                <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.6M12 18.9v2.6M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12h2.6M18.9 12h2.6M4.2 19.8l1.8-1.8M18 6l1.8-1.8"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"/></svg>
+            </button>
+
+            <label class="burger">
+                <input type="checkbox" id="menuCheckbox">
+                <div class="toggle-btn">
+                    <span class="top_line common"></span>
+                    <span class="middle_line common"></span>
+                    <span class="bottom_line common"></span>
+                </div>
+                <div class="slide">
+                    <h1>Menu</h1>
+                    <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="profil.html" class="active">Profil</a></li>
+                            <li><a href="formations.html">Formations</a></li>
+                            <li><a href="competences.html">Compétences</a></li>
+                            <li><a href="projets.html">Projets</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="references.html">Références</a></li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </nav>
+        <div class="page-header">
+            <span class="eyebrow">01 &middot; Qui je suis</span>
+            <h1>Profil</h1>
+            <p>Un peu de moi, en dehors du code et des cables reseau.</p>
+            <a href="index.html" class="back-link">&larr; Retour a l'accueil</a>
+        </div>
+
+    </header>
+
+    <section class="block reveal">
+        <div class="container">
+            <div class="profile-grid">
+                <article class="prose">
+                    <p>
+                        Hello&nbsp;! Je suis ne le <strong>29/07/2005 a Ouagadougou</strong> et je viens tout juste
+                        de terminer ma licence en Systemes d'Informations et Reseaux a l'Universite Thomas SANKARA
+                        (mention B, 15,60/20). D'origine togolaise, je comprends ma langue maternelle mais je fais
+                        aussi l'effort de m'integrer completement dans la communaute Burkinabe.
+                    </p>
+                    <p>
+                        Je suis le <strong>cadet de la famille AVOGAN</strong>, quatre freres et deux soeurs, sans
+                        etre tous de la meme mere biologique.
+                        <br><strong>Freres :</strong> Aristide, Emmanuel, Eliakim et Celestin &mdash;
+                        <strong>Soeurs :</strong> Grace et Gloria.
+                    </p>
+
+                    <div class="tag-row">
+                        <span class="tag">Celibataire</span>
+                        <span class="tag">Nationalite burkinabe</span>
+                        <span class="tag">Ouagadougou, Barogo</span>
+                    </div>
+
+                    <h3 style="margin-top:28px;">Centres d'interet</h3>
+                    <div class="interests-chip-row">
+                        <span class="skill-chip">&#128214; Lecture</span>
+                        <span class="skill-chip">&#128240; Actualite</span>
+                        <span class="skill-chip">&#127911; Musique</span>
+                        <span class="skill-chip">&#128218; Mangas</span>
+                        <span class="skill-chip">&#128187; Programmation</span>
+                        <span class="skill-chip">&#127912; Infographie &amp; montage</span>
+                    </div>
+                </article>
+
+                <aside class="card">
+                    <h3>Carte d'identite</h3>
+                    <ul class="id-list">
+                        <li><span>Ne le</span><span>29/07/2005</span></li>
+                        <li><span>Lieu</span><span>Ouagadougou</span></li>
+                        <li><span>Sexe</span><span>Masculin</span></li>
+                        <li><span>Situation</span><span>Celibataire</span></li>
+                        <li><span>Nationalite</span><span>Burkinabe, d'origine togolaise</span></li>
+                        <li><span>Domicile</span><span>Barogo, Ouagadougou</span></li>
+                    </ul>
+
+                    <h3 style="margin-top:26px;">Langues</h3>
+                    <div class="lang-bars">
+                        <div>
+                            <div class="lang-bar-label"><span>Francais</span><span>Bon niveau</span></div>
+                            <div class="lang-bar-track"><div class="lang-bar-fill" style="width:92%"></div></div>
+                        </div>
+                        <div>
+                            <div class="lang-bar-label"><span>Anglais</span><span>Niveau moyen</span></div>
+                            <div class="lang-bar-track"><div class="lang-bar-fill" style="width:58%"></div></div>
+                        </div>
+                        <div>
+                            <div class="lang-bar-label"><span>Moore</span><span>Parle, moyen</span></div>
+                            <div class="lang-bar-track"><div class="lang-bar-fill" style="width:50%"></div></div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <div style="text-align:center; margin-top:40px;">
+                <a href="formations.html" class="btn btn-outline">Decouvrir mon parcours de formation &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <h2>Informations</h2>
+
+            <div class="footer_info">
+                <div class="footer_width about">
+                    <h3>About</h3>
+                    <p>
+                        Cette page web est dediee a mon blog, offrant toute possibilite a l'internaute de me
+                        contacter pour quelconque service.
+                        <br>Realise grace a des cours, des livres et des tutos, ceci est le produit final de
+                        la conception du site.
+                    </p>
+
+                    <div class="social-media">
+                        <ul>
+                            <li><a href="#"><img src="images/tn_facebook.jpg" alt="Logo Facebook">Rechercher : AVOGAN Augustin</a></li>
+                            <li><a href="#"><img src="images/tn_whatsapp.jpg" alt="Logo WhatsApp">Via les numeros ci-dessus</a></li>
+                            <li><a href="#"><img src="images/tn_linkedin.jpg" alt="Logo LinkedIn">Rechercher : AVOGAN Augustin</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer_width link">
+                    <h3>Quick Link</h3>
+                    <ul>
+                        <li><a href="index.html"><b>Accueil</b></a></li>
+                        <li><a href="projets.html"><b>Mes projets</b></a></li>
+                        <li><a href="contact.html"><b>Me contacter</b></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_width contact">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><span><b><u>CONTACTS :</u></b> (+226) 53 33 68 86 / (+226) 05 11 38 82</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copy-right">
+                <p>© 2026 Koudjo Augustin Sandaogo AVOGAN - Tous droits reserves</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Copie d'apprentissage du site web de l'Université Thomas SANKARA réalisée sous WordPress par Augustin AVOGAN.">
+    <link rel="stylesheet" href="site.css">
+    <title>Copie du site UTS (WordPress) | Portfolio Augustin AVOGAN</title>
+
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+
+<body>
+    <nav class="topnav">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">KA</span>
+            AVOGAN Augustin
+        </a>
+
+        <ul class="topnav-links">
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="formations.html">Formations</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="projets.html" class="active">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="references.html">Références</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Basculer entre thème clair et sombre">
+                <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.6M12 18.9v2.6M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12h2.6M18.9 12h2.6M4.2 19.8l1.8-1.8M18 6l1.8-1.8"/></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"/></svg>
+            </button>
+
+            <label class="burger">
+                <input type="checkbox" id="menuCheckbox">
+                <div class="toggle-btn">
+                    <span class="top_line common"></span>
+                    <span class="middle_line common"></span>
+                    <span class="bottom_line common"></span>
+                </div>
+                <div class="slide">
+                    <h1>Menu</h1>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="profil.html">Profil</a></li>
+                        <li><a href="formations.html">Formations</a></li>
+                        <li><a href="competences.html">Compétences</a></li>
+                        <li><a href="projets.html" class="active">Projets</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="references.html">Références</a></li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <span class="eyebrow">Projet d'apprentissage · Stage DSI</span>
+        <h1>Copie du site web de l'UTS — WordPress</h1>
+        <p>Reproduire un site institutionnel réel pour apprendre à administrer un CMS, de A à Z.</p>
+        <a href="projets.html" class="back-link">← Retour aux projets</a>
+    </header>
+
+    <main class="container" style="max-width:900px;">
+        <section class="details">
+            <h2>À propos du projet</h2>
+            <p>
+                Pendant mon stage à la Direction des Systèmes d'Information (DSI) de l'Université Thomas SANKARA,
+                j'ai réalisé une copie du site web officiel de l'UTS en utilisant <strong>WordPress</strong>, à titre
+                d'apprentissage. L'objectif&nbsp;: comprendre de l'intérieur comment un CMS structure un site
+                institutionnel réel — pages, menus, médias, thème — et m'exercer à l'administration complète
+                d'un site, de l'installation à la mise en ligne.
+            </p>
+            <p>
+                Le résultat est hébergé gratuitement via <strong>InfinityFree</strong>, un hébergeur qui permet de
+                déployer des sites PHP/MySQL sans frais — pratique pour tester et présenter ce type de projet
+                d'apprentissage en dehors de l'infrastructure de l'université.
+            </p>
+
+            <div class="tech-stack">
+                <h3>Stack technique</h3>
+                <ul>
+                    <li><strong>CMS :</strong> WordPress</li>
+                    <li><strong>Langage :</strong> PHP</li>
+                    <li><strong>Base de données :</strong> MySQL</li>
+                    <li><strong>Hébergement :</strong> InfinityFree (hébergement gratuit PHP/MySQL)</li>
+                </ul>
+            </div>
+
+            <h3>Ce que ce projet m'a appris</h3>
+            <ul>
+                <li>Installer et configurer WordPress sur un hébergement mutualisé gratuit.</li>
+                <li>Reproduire la structure d'un site existant : pages, menus de navigation, médiathèque.</li>
+                <li>Adapter un thème pour se rapprocher de l'identité visuelle de l'UTS.</li>
+                <li>Gérer le contenu (textes, images, actualités) comme le ferait un administrateur de site.</li>
+                <li>Comprendre les limites et compromis d'un hébergement gratuit (performance, stockage, nom de domaine).</li>
+            </ul>
+
+            <p style="margin-top:18px;">
+                Ce projet complète directement mon stage à la DSI de l'UTS — vous pouvez consulter
+                <a href="stage-dsi.html">le détail de ce stage ici</a>.
+            </p>
+        </section>
+
+        <section class="app-access">
+            <div class="cta-box">
+                <h2>Voir le résultat</h2>
+                <p>La copie du site est en ligne et consultable librement. Il s'agit d'un projet d'apprentissage,
+                    non affilié au site officiel de l'université.</p>
+                <a href="https://uts.infinityfreeapp.com" target="_blank" rel="noopener" class="btn-primary">Visiter la copie du site UTS</a>
+                <p class="sub-text">Site officiel de l'UTS : <a href="https://www.uts.bf/" target="_blank" rel="noopener">uts.bf</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <h2>Informations</h2>
+            <div class="footer_info">
+                <div class="footer_width about">
+                    <h3>About</h3>
+                    <p>
+                        Cette page web est dédiée à mon blog offrant toute possibilité à l'internaute de me contacter pour quelconque service.
+                        <br> Réalisé grâce à des cours, des livres et tutos, ceci est le produit final de la conception du site.
+                    </p>
+                    <div class="social-media">
+                        <ul>
+                            <li><a href="#"><img src="images/tn_facebook.jpg" alt="Logo Facebook"> Rechercher: AVOGAN Augustin</a></li>
+                            <li><a href="#"><img src="images/tn_whatsapp.jpg" alt="Logo WhatsApp"> Via les numéros ci-dessus</a></li>
+                            <li><a href="#"><img src="images/tn_linkedin.jpg" alt="Logo LinkedIn"> Rechercher: AVOGAN Augustin</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer_width link">
+                    <h3>Quick Link</h3>
+                    <ul>
+                        <li><a href="index.html"><b>Accueil</b></a></li>
+                        <li><a href="projets.html"><b>Mes projets</b></a></li>
+                        <li><a href="contact.html"><b>Me contacter</b></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_width contact">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><span><b><u>CONTACTS :</u></b> (+226) 53 33 68 86 / (+226) 05 11 38 82</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copy-right">
+                <p>© 2026 Koudjo Augustin Sandaogo AVOGAN - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="site.js"></script>
+</body>
+</html>

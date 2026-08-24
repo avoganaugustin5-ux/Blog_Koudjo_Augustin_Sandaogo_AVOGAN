@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Competences en programmation, reseaux, creation graphique et montage video.">
+    <link rel="stylesheet" href="site.css">
+    <title>Competences — Koudjo Augustin AVOGAN</title>
+
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+
+<body>
+
+    <header>
+    <nav class="topnav">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">KA</span>
+            AVOGAN Augustin
+        </a>
+
+        <ul class="topnav-links">
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="formations.html">Formations</a></li>
+                <li><a href="competences.html" class="active">Compétences</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="references.html">Références</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Basculer entre theme clair et sombre">
+                <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.6M12 18.9v2.6M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12h2.6M18.9 12h2.6M4.2 19.8l1.8-1.8M18 6l1.8-1.8"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"/></svg>
+            </button>
+
+            <label class="burger">
+                <input type="checkbox" id="menuCheckbox">
+                <div class="toggle-btn">
+                    <span class="top_line common"></span>
+                    <span class="middle_line common"></span>
+                    <span class="bottom_line common"></span>
+                </div>
+                <div class="slide">
+                    <h1>Menu</h1>
+                    <ul>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="profil.html">Profil</a></li>
+                            <li><a href="formations.html">Formations</a></li>
+                            <li><a href="competences.html" class="active">Compétences</a></li>
+                            <li><a href="projets.html">Projets</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="references.html">Références</a></li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </nav>
+        <div class="page-header">
+            <span class="eyebrow">03 &middot; Savoir-faire</span>
+            <h1>Competences</h1>
+            <p>Trois familles de competences que je continue de developper au quotidien.</p>
+            <a href="index.html" class="back-link">&larr; Retour a l'accueil</a>
+        </div>
+
+    </header>
+
+    <section class="block reveal">
+        <div class="container">
+            <div class="tabs-nav" role="tablist">
+                <button class="tab-btn active" data-tab="tab-prog" type="button">&#128187; Programmation &amp; Systemes</button>
+                <button class="tab-btn" data-tab="tab-graphic" type="button">&#127912; Creation graphique</button>
+                <button class="tab-btn" data-tab="tab-video" type="button">&#127909; Montage video</button>
+            </div>
+
+            <div class="tab-panel active" id="tab-prog">
+                <article class="mesArticles">
+                    <p class="debutArticle">
+                        Les langages de programmation traduisent des idees en actions concretes. Ils sont au coeur
+                        de la creation de logiciels, d'applications, et de la resolution de problemes techniques
+                        aussi bien cote developpement que cote administration systeme.
+                    </p>
+                </article>
+
+                <div class="skill-groups">
+                    <div class="skill-group">
+                        <h4>Langages</h4>
+                        <div class="skill-chip-row">
+                            <span class="skill-chip">Python</span>
+                            <span class="skill-chip">Java</span>
+                            <span class="skill-chip">C</span>
+                            <span class="skill-chip">PHP</span>
+                            <span class="skill-chip">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Frameworks / Web</h4>
+                        <div class="skill-chip-row">
+                            <span class="skill-chip">Laravel</span>
+                            <span class="skill-chip">Django</span>
+                            <span class="skill-chip">Bootstrap</span>
+                            <span class="skill-chip">HTML / CSS</span>
+                            <span class="skill-chip">WordPress</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Bases de donnees</h4>
+                        <div class="skill-chip-row">
+                            <span class="skill-chip">MySQL</span>
+                            <span class="skill-chip">PostgreSQL</span>
+                            <span class="skill-chip">SQL</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Reseaux &amp; Systemes</h4>
+                        <div class="skill-chip-row">
+                            <span class="skill-chip">Cisco Packet Tracer</span>
+                            <span class="skill-chip">Administration Systeme</span>
+                            <span class="skill-chip">Securite informatique</span>
+                            <span class="skill-chip">Windows</span>
+                            <span class="skill-chip">Linux (notions)</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Cloud / Stockage</h4>
+                        <div class="skill-chip-row">
+                            <span class="skill-chip">MinIO</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4>Bureautique</h4>
+                        <div class="skill-chip-row">
+                            <span class="skill-chip">Word</span>
+                            <span class="skill-chip">Excel</span>
+                            <span class="skill-chip">PowerPoint</span>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="card" style="margin-top:24px;">
+                    <h3>Note</h3>
+                    Tout au long de mon parcours universitaire, je me suis donne du mal pour realiser des
+                    prototypes fonctionnels sur mes projets, quel que soit le systeme d'exploitation
+                    (Windows ou Linux). N'hesitez pas a me contacter pour tout <strong>besoin d'ingenierie
+                    de conception dans un projet</strong>.
+                </aside>
+            </div>
+
+            <div class="tab-panel" id="tab-graphic">
+                <article class="mesArticles">
+                    <p class="debutArticle">
+                        J'utilise les outils Adobe, notamment <strong>Photoshop</strong> et <strong>Illustrator</strong>,
+                        et je decouvre progressivement <strong>Premiere Pro</strong>. Voici quelques images issues
+                        de mes realisations &mdash; n'hesitez pas a me contacter si vous souhaitez beneficier de mes services.
+                    </p>
+                </article>
+
+                <div class="carousel-container">
+                    <div class="carousel-slide fade">
+                        <img src="images/tn_coursDomicile.png" alt="Affiche pour mes cours a domicile">
+                        <div class="caption">Affiche &mdash; Cours particuliers a domicile</div>
+                    </div>
+                    <div class="carousel-slide fade">
+                        <img src="images/tn_installation.png" alt="Affiche pour des installations logicielles">
+                        <div class="caption">Affiche &mdash; Installation de logiciels</div>
+                    </div>
+                    <div class="carousel-slide fade">
+                        <img src="images/tn_photoshop.jpg" alt="Logo Photoshop">
+                        <div class="caption">Environnement de travail &mdash; Photoshop</div>
+                    </div>
+                    <div class="carousel-slide fade">
+                        <img src="images/tn_illustrator.jpg" alt="Logo Illustrator">
+                        <div class="caption">Environnement de travail &mdash; Illustrator</div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <a href="Documents/PortFolioAA.pdf" title="Le PortFolio de AVOGAN Augustin" id="portfolio">&#128196; Telecharger le portfolio complet</a>
+            </div>
+
+            <div class="tab-panel" id="tab-video">
+                <article class="mesArticles">
+                    <p class="debutArticle">
+                        Je realise des montages avec la suite Adobe, a savoir <strong>Premiere Pro</strong> et
+                        <strong>After Effects</strong>. Je me situe encore a un niveau debutant dans ce domaine,
+                        avec environ un an de pratique et deux videos realisees a mon actif &mdash; je continue de
+                        progresser regulierement.
+                    </p>
+                </article>
+
+                <div class="mini-gallery">
+                    <img src="images/tn_th_premierePro.jpg" alt="Logo Premiere Pro">
+                    <img src="images/tn_afterEffect.jpg" alt="Logo After Effect">
+                </div>
+
+                <video src="Documents/ToActivePhotoshopHowAA.iphone.mp4" controls poster="images/tn_active_photo.png">
+                    Il est temps de mettre a jour votre navigateur !
+                </video>
+                <p class="texteArticle">Petite video montrant comment activer la version d'evaluation de Photoshop apres un message d'erreur.</p>
+            </div>
+
+            <div style="text-align:center; margin-top:40px;">
+                <a href="projets.html" class="btn btn-outline">Voir mes projets &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <h2>Informations</h2>
+
+            <div class="footer_info">
+                <div class="footer_width about">
+                    <h3>About</h3>
+                    <p>
+                        Cette page web est dediee a mon blog, offrant toute possibilite a l'internaute de me
+                        contacter pour quelconque service.
+                        <br>Realise grace a des cours, des livres et des tutos, ceci est le produit final de
+                        la conception du site.
+                    </p>
+
+                    <div class="social-media">
+                        <ul>
+                            <li><a href="#"><img src="images/tn_facebook.jpg" alt="Logo Facebook">Rechercher : AVOGAN Augustin</a></li>
+                            <li><a href="#"><img src="images/tn_whatsapp.jpg" alt="Logo WhatsApp">Via les numeros ci-dessus</a></li>
+                            <li><a href="#"><img src="images/tn_linkedin.jpg" alt="Logo LinkedIn">Rechercher : AVOGAN Augustin</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer_width link">
+                    <h3>Quick Link</h3>
+                    <ul>
+                        <li><a href="index.html"><b>Accueil</b></a></li>
+                        <li><a href="projets.html"><b>Mes projets</b></a></li>
+                        <li><a href="contact.html"><b>Me contacter</b></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_width contact">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><span><b><u>CONTACTS :</u></b> (+226) 53 33 68 86 / (+226) 05 11 38 82</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copy-right">
+                <p>© 2026 Koudjo Augustin Sandaogo AVOGAN - Tous droits reserves</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="site.js"></script>
+</body>
+</html>

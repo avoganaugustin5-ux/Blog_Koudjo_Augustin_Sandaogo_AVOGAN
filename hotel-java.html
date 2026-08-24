@@ -3,14 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="projets-style.css">
+    <link rel="stylesheet" href="site.css">
     <title>Gestion d'Hôtel | Portfolio Augustin AVOGAN</title>
+
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 </head>
 <body>
-    <header class="project-header">
+    <nav class="topnav">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">KA</span>
+            AVOGAN Augustin
+        </a>
+
+        <ul class="topnav-links">
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="formations.html">Formations</a></li>
+            <li><a href="competences.html">Compétences</a></li>
+            <li><a href="projets.html" class="active">Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="references.html">Références</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Basculer entre theme clair et sombre">
+                <svg class="icon-sun" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.6M12 18.9v2.6M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12h2.6M18.9 12h2.6M4.2 19.8l1.8-1.8M18 6l1.8-1.8"/></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"/></svg>
+            </button>
+
+            <label class="burger">
+                <input type="checkbox" id="menuCheckbox">
+                <div class="toggle-btn">
+                    <span class="top_line common"></span>
+                    <span class="middle_line common"></span>
+                    <span class="bottom_line common"></span>
+                </div>
+                <div class="slide">
+                    <h1>Menu</h1>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="profil.html">Profil</a></li>
+                        <li><a href="formations.html">Formations</a></li>
+                        <li><a href="competences.html">Compétences</a></li>
+                        <li><a href="projets.html" class="active">Projets</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="references.html">Références</a></li>
+                    </ul>
+                </div>
+            </label>
+        </div>
+    </nav>
+
+<header class="project-header">
+        <span class="eyebrow">Projet · Bureau</span>
         <h1>Système de Gestion d'Hôtel</h1>
         <p>Application de bureau avec interface graphique en Java</p>
-        <a href="index.html#projets" class="back-link">← Retour au Blog</a>
+        <a href="projets.html" class="back-link">← Retour aux projets</a>
     </header>
 
     <main class="container">
@@ -67,9 +120,9 @@
             <div class="footer_width link">
                 <h3>Quick Link</h3>
                 <ul>
-                    <li><a href="index.html#pageAccueil"><b>Accueil</b></a></li>
-                    <li><a href="index.html#projets"><b>Mes projets</b></a></li>
-                    <li><a href="index.html#formulaire"><b>Me contacter</b></a></li>
+                    <li><a href="index.html"><b>Accueil</b></a></li>
+                    <li><a href="projets.html"><b>Mes projets</b></a></li>
+                    <li><a href="contact.html"><b>Me contacter</b></a></li>
                 </ul>
             </div>
 
@@ -90,6 +143,6 @@
         </div>
     </footer>
 
-    <script src="projets-script.js"></script>
+    <script src="site.js"></script>
 </body>
 </html>
